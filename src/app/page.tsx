@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Feature } from "@/ui/features/feature";
+import { PhotoBanner } from "@/ui/photoBanner/photoBanner";
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 				/>
 			</div>
 			<Feature />
+			<PhotoBanner />
 		</main>
 	);
 }
