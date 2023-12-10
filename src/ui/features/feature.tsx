@@ -2,9 +2,9 @@ import { features } from "@/data/features";
 
 export const Feature = () => {
 	return (
-		<section className="container mx-auto px-5 py-24">
+		<section className="container mx-auto px-5 py-5">
 			<div className="mb-20 text-center text-2xl">
-				<h2 className="mb-4 font-bold text-green-700">
+				<h2 className="mb-4 font-bold text-gray-900">
 					Experience a comprehensive gutter cleaning service with our team,
 				</h2>
 				<p className="text-gray-500s mx-auto text-base leading-relaxed lg:w-3/4 xl:w-2/4">
@@ -21,7 +21,7 @@ export const Feature = () => {
 									<Icon />
 								</div>
 								<div className="flex-grow">
-									<h2 className="title-font mb-3 text-lg font-bold text-green-700">
+									<h2 className="title-font mb-3 text-lg font-bold text-gray-900">
 										{feature.heading}
 									</h2>
 									<p className="text-base leading-relaxed">{feature.description}</p>
