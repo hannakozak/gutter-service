@@ -4,9 +4,9 @@ import type Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
 	const formData = await request.formData();
-	const name = formData.get("name");
-	const email = formData.get("email");
-	const message = formData.get("message");
+	const name = formData.get("name") as string;
+	const email = formData.get("email") as string;
+	const message = formData.get("message") as string;
 
 	const transport = nodemailer.createTransport({
 		service: "gmail",
