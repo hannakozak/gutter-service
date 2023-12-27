@@ -1,6 +1,6 @@
 "use client";
 
-import { sendEmail } from "@/utils/send-email";
+import { type FormEvent } from "react";
 
 export type FormData = {
 	name: string;
@@ -8,21 +8,29 @@ export type FormData = {
 	message: string;
 };
 export const Contact = () => {
-	async function handleSubmit(event: React.SyntheticEvent) {
+	async function handleSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 
-		const target = event.target as typeof event.target & {
-			name: { value: string };
-			email: { value: string };
-			message: { value: string };
-		};
-		const data = {
-			name: String(target.name.value),
-			email: String(target.email.value),
-			message: String(target.message.value),
-		};
+		const formData = new FormData(event.currentTarget);
 
-		sendEmail(data);
+		try {
+			const response = await fetch("/api/email", {
+				method: "post",
+				body: formData,
+			});
+
+			if (!response.ok) {
+				console.log("falling over");
+				throw new Error(`response status: ${response.status}`);
+			}
+			const responseData = await response.json();
+			console.log(responseData["message"]);
+
+			alert("Message successfully sent");
+		} catch (err) {
+			console.error(err);
+			alert("Error, please try resubmitting the form");
+		}
 	}
 	return (
 		<form onSubmit={handleSubmit}>
