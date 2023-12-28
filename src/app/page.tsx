@@ -27,15 +27,12 @@ export default function Home({ searchParams }: SearchParamProps) {
 				/>
 			</div>
 			<Feature />
-
 			<Link href="/?show=true">
 				<button className="mx-auto mb-5 flex rounded border-0 bg-green-700 px-8 py-2 text-lg text-white hover:bg-green-900 focus:outline-none">
 					Contact us
 				</button>
 			</Link>
-
 			<PhotoBanner />
-
 			<Testimonials />
 		</main>
 	);

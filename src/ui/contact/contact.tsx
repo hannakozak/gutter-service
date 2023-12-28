@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { type FormEvent } from "react";
 
 export type FormData = {
@@ -8,9 +9,9 @@ export type FormData = {
 	message: string;
 };
 export const Contact = () => {
+	const router = useRouter();
 	async function handleSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
-
 		const formData = new FormData(event.currentTarget);
 
 		try {
@@ -27,6 +28,7 @@ export const Contact = () => {
 			console.log(responseData["message"]);
 
 			alert("Message successfully sent");
+			router.push("/");
 		} catch (err) {
 			console.error(err);
 			alert("Error, please try resubmitting the form");
@@ -43,8 +45,9 @@ export const Contact = () => {
 					minLength={3}
 					maxLength={150}
 					required
-					className=" border border-gray-100 bg-gray-50 p-4 "
+					className=" border border-gray-200 bg-gray-50 p-4 "
 					autoComplete="off"
+					name="name"
 					id="name"
 				/>
 			</div>
@@ -57,9 +60,10 @@ export const Contact = () => {
 					minLength={5}
 					maxLength={150}
 					required
-					className=" border border-gray-100 bg-gray-50 p-4 "
+					className=" border border-gray-200 bg-gray-50 p-4 "
 					autoComplete="off"
 					id="email"
+					name="email"
 				/>
 			</div>
 			<div>
@@ -72,12 +76,12 @@ export const Contact = () => {
 					minLength={10}
 					maxLength={500}
 					name="message"
-					className="w-full border border-gray-100 bg-gray-50 p-4 "
+					className="w-full border border-gray-200 bg-gray-50 p-4 "
 				/>
 			</div>
 			<button
 				type="submit"
-				className="mt-4 w-40 bg-gray-700 px-4 py-2 font-medium text-white disabled:bg-gray-400 disabled:text-gray-100"
+				className="mx-auto my-5 flex rounded border-0 bg-green-700 px-8 py-2 text-lg text-white hover:bg-green-900 focus:outline-none"
 			>
 				Send Message
 			</button>
