@@ -15,7 +15,7 @@ export default function Home({ searchParams }: SearchParamProps) {
 	return (
 		<main className="container mx-auto lg:max-w-7xl">
 			{show && <Modal />}
-			<div className="relative h-[280px]  lg:h-[600px]">
+			<div className="relative mt-16 h-[280px]  lg:h-[600px]">
 				<Image
 					src="/images/main.png"
 					alt="Picture of house"

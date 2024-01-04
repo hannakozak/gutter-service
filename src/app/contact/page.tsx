@@ -1,9 +1,9 @@
-import { Contact } from "@/ui/contact/contact";
+import { Modal } from "@/ui/Modal";
+
 export default function ContactPage() {
 	return (
 		<>
-			<h1>Contact form</h1>
-			<Contact />
+			<Modal />
 		</>
 	);
 }
