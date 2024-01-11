@@ -1,9 +1,9 @@
-import { Modal } from "@/ui/Modal";
+import { Contact } from "@/ui/contact/contact";
 
 export default function ContactPage() {
 	return (
-		<>
-			<Modal />
-		</>
+		<section className="mx-auto mt-36">
+			<Contact />
+		</section>
 	);
 }
