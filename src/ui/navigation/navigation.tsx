@@ -12,7 +12,6 @@ type NavLinksProps = {
 };
 
 const navLinks: NavLinksProps[] = [
-	{ href: "/", label: "Home", exact: true },
 	{ href: "/about", label: "About", exact: false },
 	{ href: "/contact", label: "Contact", exact: false },
 ];

@@ -1,12 +1,18 @@
 import { Navigation } from "../navigation/navigation";
+import { ActiveLink } from "../navigation/activeLink";
 
 export const Header = () => {
 	return (
 		<header className="fixed top-0 z-10 flex h-16 w-screen justify-between bg-gray-900 py-3 text-white lg:max-w-7xl">
-			<div className="flex flex-col">
+			<ActiveLink
+				href="/"
+				exact={true}
+				className="flex flex-col px-3 text-center font-semibold"
+				activeClassName="text-green-500"
+			>
 				<span>Gutter</span>
 				<span>Service</span>
-			</div>
+			</ActiveLink>
 			<Navigation />
 		</header>
 	);
