@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export const PhotoBanner = () => {
 	return (
-		<section className="flex flex-col items-center justify-between md:flex-row">
-			<div className="relative m-6 h-[250px] w-[400px] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] lg:h-[380px]">
+		<section className="flex flex-col items-center justify-between px-3 md:flex-row">
+			<div className="relative m-6 h-[250px] w-[300px] text-center shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] md:w-[400px] lg:h-[380px]">
 				<Image
 					src="/images/gutter-a.png"
 					alt="Gutter cleaning"
@@ -14,7 +14,7 @@ export const PhotoBanner = () => {
 					}}
 				/>
 			</div>
-			<div className="relative m-6 h-[250px] w-[400px] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] lg:h-[380px]">
+			<div className="relative m-6 h-[250px] w-[300px] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] md:w-[400px] lg:h-[380px]">
 				<Image
 					src="/images/gutter-b.png"
 					alt="Gutter cleaning"
@@ -25,7 +25,7 @@ export const PhotoBanner = () => {
 					}}
 				/>
 			</div>
-			<div className="relative m-6 h-[250px] w-[400px] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] xl:h-[380px]">
+			<div className="relative m-6 h-[250px] w-[300px]  shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] md:w-[400px] xl:h-[380px]">
 				<Image
 					src="/images/gutter-c.png"
 					alt="Gutter cleaning"

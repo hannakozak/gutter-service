@@ -30,7 +30,7 @@ export const Navigation = () => {
 					<X className={`fill-current ${isOpen ? "block" : "hidden"}`} />
 				</button>
 				<div className={`block w-full flex-grow lg:flex lg:w-auto ${isOpen ? "block" : "hidden"}`}>
-					<ul className="lg:w-500 mx-auto ml-[-60px] flex w-screen flex-col bg-gray-900  lg:w-auto lg:flex-row lg:place-items-center">
+					<ul className="lg:w-500 mx-auto ml-[-100px] flex w-screen flex-col bg-gray-900  lg:w-auto lg:flex-row lg:place-items-center">
 						{navLinks.map(({ href, label, exact }) => (
 							<li key={label} className="block py-2 pl-3 pr-4" onClick={() => setIsOpen(!isOpen)}>
 								<ActiveLink
