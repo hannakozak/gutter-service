@@ -3,6 +3,7 @@ import "../ui/globals.css";
 import { inter } from "../ui/fonts";
 import { Header } from "@/ui/header/header";
 import { Footer } from "@/ui/footer/footer";
+import { SocialMedia } from "@/ui/footer/social-media";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
@@ -11,6 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			>
 				<Header />
 				{children}
+				<SocialMedia />
 				<Footer />
 			</body>
 		</html>
