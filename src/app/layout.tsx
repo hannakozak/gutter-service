@@ -1,4 +1,10 @@
 import "../ui/globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Gutter Service",
+	description: "Website of company that offers local gutter service",
+};
 
 import { inter } from "../ui/fonts";
 import { Header } from "@/ui/header/header";

@@ -15,11 +15,12 @@ export default function Home({ searchParams }: SearchParamProps) {
 	return (
 		<main className="container mx-auto lg:max-w-7xl">
 			{show && <Modal />}
-			<div className="relative mt-16 h-[280px]  lg:h-[600px]">
+			<div className="relative mt-16 h-[280px] md:h-[350px] lg:h-[600px]">
 				<Image
 					src="/images/main.png"
 					alt="Picture of house"
-					fill={true}
+					fill
+					sizes="(min-width: 280px) 300px, 100vw"
 					style={{
 						objectFit: "cover",
 						objectPosition: "top",
