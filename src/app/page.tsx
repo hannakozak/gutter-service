@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Feature } from "@/ui/features/feature";
 import { PhotoBanner } from "@/ui/photoBanner/photoBanner";
@@ -13,19 +12,21 @@ export default function Home({ searchParams }: SearchParamProps) {
 	const show = searchParams?.show;
 
 	return (
-		<main className="container mx-auto lg:max-w-7xl">
+		<main className="mx-auto w-full lg:max-w-7xl">
 			{show && <Modal />}
-			<div className="relative mt-16 h-[280px] md:h-[350px] lg:h-[600px]">
-				<Image
-					src="/images/main.png"
-					alt="Picture of house"
-					fill
-					sizes="(min-width: 280px) 300px, 100vw"
-					style={{
-						objectFit: "cover",
-						objectPosition: "top",
-					}}
-				/>
+			<div className="bg-brand-dark bg-roof px-4pt-20 flex min-h-screen flex-col justify-center bg-cover bg-center bg-no-repeat px-3 text-white sm:px-6 sm:pt-24 lg:px-20  lg:pt-32">
+				<h1 className="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
+					Welcome to <br />
+					Gutter Services
+				</h1>
+				<p className="max-w-xs text-base sm:text-lg md:mb-6 md:max-w-md lg:text-xl">
+					Protect your home with our expert gutter solutions.
+				</p>
+				<Link href="/?show=true">
+					<button className="bg-brand-green mb-5 mt-6 rounded px-6 py-2 text-base text-white hover:bg-green-900 focus:outline-none sm:mt-0 sm:px-8 sm:py-3 sm:text-lg lg:px-10 lg:py-4 lg:text-xl">
+						Contact us
+					</button>
+				</Link>
 			</div>
 			<Feature />
 			<Link href="/?show=true">

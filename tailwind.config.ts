@@ -10,9 +10,12 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			colors: {
+				"brand-dark": "#0F2838",
+				"brand-green": "#156C5D",
+			},
 			backgroundImage: {
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-				"gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+				roof: "url('/images/green-roof.png')",
 			},
 		},
 	},

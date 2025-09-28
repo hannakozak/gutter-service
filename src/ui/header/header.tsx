@@ -3,7 +3,7 @@ import { ActiveLink } from "../navigation/activeLink";
 
 export const Header = () => {
 	return (
-		<header className="fixed top-0 z-10 flex h-16 w-screen justify-between bg-gray-900 py-3 text-white lg:max-w-7xl">
+		<header className="bg-brand-dark fixed top-0 z-10 flex h-16 w-screen justify-between py-3 text-white lg:max-w-7xl">
 			<ActiveLink
 				href="/"
 				exact={true}

@@ -17,4 +17,5 @@ body {
 	--swiper-navigation-color: #111827;
 	--swiper-pagination-color: #111827;
 	--swiper-navigation-size: 20px;
+	height: 100%;
 }
