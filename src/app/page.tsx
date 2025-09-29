@@ -14,16 +14,17 @@ export default function Home({ searchParams }: SearchParamProps) {
 	return (
 		<main className="mx-auto w-full lg:max-w-7xl">
 			{show && <Modal />}
-			<div className="bg-brand-dark bg-roof px-4pt-20 flex min-h-screen flex-col justify-center bg-cover bg-center bg-no-repeat px-3 text-white sm:px-6 sm:pt-24 lg:px-20  lg:pt-32">
+			<div className="px-4pt-20 flex min-h-screen flex-col justify-center bg-brand-dark bg-roof bg-cover bg-center bg-no-repeat px-3 text-white sm:px-6 sm:pt-24 lg:px-20  lg:pt-32">
 				<h1 className="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
 					Welcome to <br />
 					Gutter Services
 				</h1>
-				<p className="max-w-xs text-base sm:text-lg md:mb-6 md:max-w-md lg:text-xl">
-					Protect your home with our expert gutter solutions.
+				<p className="max-w-xs  sm:text-lg md:mb-6 md:max-w-md lg:text-xl">
+					Protect your home <br />
+					our expert gutter solutions.
 				</p>
 				<Link href="/?show=true">
-					<button className="bg-brand-green mb-5 mt-6 rounded px-6 py-2 text-base text-white hover:bg-green-900 focus:outline-none sm:mt-0 sm:px-8 sm:py-3 sm:text-lg lg:px-10 lg:py-4 lg:text-xl">
+					<button className="mb-5 mt-6 rounded bg-brand-green px-6 py-2 text-base text-white hover:bg-green-900 focus:outline-none sm:mt-0 sm:px-8 sm:py-3 sm:text-lg lg:px-10 lg:py-4 lg:text-xl">
 						Contact us
 					</button>
 				</Link>
